@@ -2,7 +2,13 @@ from typing import Optional, List
 
 from fastapi import FastAPI, HTTPException
 
+from routers.user_router import router as user_router
+
 app = FastAPI()
+
+# 用户路由
+app.include_router(user_router)
+
 
 
 @app.get("/")
