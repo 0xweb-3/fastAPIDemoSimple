@@ -19,5 +19,5 @@ uvicorn main:app --reload
 * v1.1.0 helloWorld✅
 * v1.2.0 传参✅
 * v1.3.0 异步-响应状态码✅
-* v1.4.0 商品案例
+* v1.4.0 商品案例✅
 * v1.5.0 ApIRouter路由
