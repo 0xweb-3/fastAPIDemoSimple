@@ -17,11 +17,15 @@ def read_item(item_id: int):
 def read_user(user_id: int, skip: int = 0, limit: int = 100):
     return {"user_id": user_id, "skip": skip, "limit": limit}
 
+
 from pydantic import BaseModel
+
+
 class Item(BaseModel):
     name: str
     description: str = None
     price: float
+
 
 @app.post("/User")
 def create_user(item: Item):
@@ -31,3 +35,12 @@ def create_user(item: Item):
     return item_dict
 
 
+@app.get("/async_user/{user_id}")
+async def read_user(user_id: str):
+    return {"user_id": user_id}
+
+from fastapi import status
+
+@app.get("/code/{id}", status_code=status.HTTP_201_CREATED)
+def create_specific_item(id: int):
+    return {"id": id}
