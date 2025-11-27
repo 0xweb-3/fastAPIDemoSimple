@@ -16,4 +16,8 @@ uvicorn main:app --reload
 文档http://127.0.0.1:8000/docs 
 
 ## 进度
-* v1.1.0 helloWorld
+* v1.1.0 helloWorld✅
+* v1.2.0 传参
+* v1.3.0 异步-响应状态码
+* v1.4.0 商品案例
+* v1.5.0 ApIRouter路由
